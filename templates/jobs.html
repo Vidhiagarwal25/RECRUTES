@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jobs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!--header section starts-->
+    <header class="header">
+
+       <section class="flex">
+           <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+           <a href="{{ url_for('home') }}" class="logo">
+              <img src="{{ url_for('static', filename='images/MYLOGO.png') }}" alt="recrutes Logo" height="80">
+           </a>
+
+           <nav class="navbar">
+              <a href="{{ url_for('home') }}">home</a>
+              <a href="{{ url_for('about') }}">about us</a>
+              <a href="{{ url_for('jobs') }}">all jobs</a>
+              <a href="{{ url_for('contact') }}">contact us</a>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Account</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="{{ url_for('asstudent') }}">As Student</a>
+                    <a href="{{ url_for('ascompany') }}">As Company</a>
+                </div>
+            </div>
+           </nav>
+
+           <a href="{{ url_for('resume') }}" class="btn" style="margin-top: 0;">Create Resume</a>
+       </section>
+    </header>
+    <!--header section ends-->
+
+
+    <!--sidebar section starts-->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Contract</a></li>
+            <li><a href="#">Full-time</a></li>
+            <li><a href="#">Intern</a></li>
+            <li><a href="#">Part-Time</a></li>
+            <li><a href="#">Temporary</a></li>
+        </ul>
+    </div>
+    <!-- sidebar section ends-->
+
+
+
+    <!-- jobs section here-->
+<div class="job-list">
+    {% for job in job %}
+    <div class="job-item">
+        <div class="card-body">
+            <h1 class="card-title">{{ job.Role }}</h1>
+            <h2 class="card-text">Title: {{ job.Job_Title }}</h2>
+            <h3 class="card-text">Company: {{ job.Company }}</h3>
+            <h4 class="card-text">Salary:{{ job.Salary_Range }}</h4>
+            <p class="card-text">Skills: {{ job.skills }}</p>
+            <p class="card-text">Description: {{ job.Job_Description }}</p>
+            <p class="card-text">Experience: {{ job.Experience }}</p>
+            <p class="card-text">Qualification: {{ job.Qualifications }}</p>
+            <p class="card-text">Responsibilities: {{ job.Responsibilities }}</p>
+            <p class="card-text">Benefits: {{ job.Benefits }}</p>
+            <p class="card-text">Posting Date: {{ job.Posting_Date }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+</body>
+</html>

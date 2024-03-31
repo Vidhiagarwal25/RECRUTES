@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--custom css file link--> 
+     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+</head>
+<body>
+
+<!--header section starts-->
+
+<header class="header">
+
+    <section class="flex">
+        <div id="menu-btn" class="fas fa-bars-staggered"></div>
+        
+        <a href="home.html" class="logo">
+            <img src="{{url_for('static', filename='images/MYLOGO.png')}}" alt="recrutes Logo" height="80">
+        </a>        
+
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}">home</a>
+            <a href="{{ url_for('about') }}">about us</a>
+            <a href="{{ url_for('jobs') }}">all jobs</a>
+            <a href="{{ url_for('contact') }}">contact us</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Account</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="{{ url_for('asstudent') }}">As Student</a>
+                    <a href="{{ url_for('ascompany') }}">As Company</a>
+                </div>
+            </div>
+        </nav>
+
+        <a href="{{ url_for('resume') }}" class="btn" style="margin-top: 0;">Create Resume</a>
+    </section>
+</header>
+<!--header section ends-->
+
+
+<!--about us starts-->
+
+<section class="about">
+
+    <img src="{{url_for('static', filename='images/aboutusbgS.jpeg')}}" alt=""/>
+    <div class="box">
+        <h3>why choose us?</h3>
+        <p>Choose us for unparalleled opportunities and seamless career advancement. With a commitment to excellence, we meticulously curate job listings from diverse industries, ensuring a wide array of opportunities tailored to your skills and aspirations. Our user-friendly interface empowers you to effortlessly navigate through job postings, while our cutting-edge algorithms match you with positions that align perfectly with your expertise and career goals. Whether you're a seasoned professional or just starting your journey, trust us to be your ultimate partner in unlocking the next chapter of your career success.</p>
+        <p>Moreover, we goes beyond job listings; we offer valuable resources such as resume tips, interview guidance, and career advice to support you at every stage of your professional journey. Our dedicated support team is always available to assist you, ensuring a smooth and rewarding experience. Join us today and let's embark on this journey towards your dream career together</p>
+        <a href="{{ url_for('contact') }}" class="btn">get in touch</a>
+
+    </div>
+
+</section>
+
+<!--about us ends-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer section starts-->
+
+<footer class="footer">
+    <section class="grid">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="{{ url_for('home') }}"><i class="fas fa-angle-right" ></i> home</a>
+            <a href="{{ url_for('about') }}"><i class="fas fa-angle-right" ></i> about</a>
+            <a href="{{ url_for('jobs') }}"><i class="fas fa-angle-right" ></i> all jobs</a>
+            <a href="{{ url_for('contact') }}"><i class="fas fa-angle-right" ></i> contact us</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="{{ url_for('terms') }}"><i class="fas fa-angle-right" ></i> terms</a>
+            <a href="{{ url_for('privacy') }}"><i class="fas fa-angle-right" ></i> privacy</a>
+
+        </div>
+
+        <div class="box">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa-brands fa-facebook"></i>facebook</a>
+            <a href="#"><i class="fa-brands fa-instagram"></i>instagram</a>
+            <a href="#"><i class="fa-brands fa-twitter"></i>twitter</a>
+            <a href="#"><i class="fa-brands fa-youtube"></i>youtube</a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i>linkedin</a> 
+        </div>
+    </section>
+
+    <div class="credit">&copy; copyright @2024 by vidhi agarwal</span> | all rights  are reserved!</div>
+</footer>
+<!-- footer section ends-->
+
+    <!--custom js file link-->
+     <script src="{{url_for('static', filename='js/script.js')}}"></script>
+
+
+</body>
+</html>
