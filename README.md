@@ -3,12 +3,17 @@
 
 # TECHNOLOGY USED
 - FRONTEND
-     -HTML
-     -CSS
-     -FLASK
-  - BACKEND
-     -JAVASCRIPT
-     -PYTHON
+  
+         -HTML
+         -CSS
+         -FLASK
+  
+- BACKEND
+  
+        -JAVASCRIPT
+        -PYTHON
+  
   - DATABASE
-     -MONGODB
+    
+       -MONGODB
      
