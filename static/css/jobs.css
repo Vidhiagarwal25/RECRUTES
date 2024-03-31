@@ -1,0 +1,71 @@
+/*job section---->*/
+.sidebar {
+    position: fixed;
+    top: 5;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #8d8989; /* Sidebar background color */
+    padding-top: 50px; /* Adjust as needed */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: white; /* Link text color */
+    text-decoration: none;
+    display: block;
+	font-size: 20px; /* Increase font size */
+}
+
+.sidebar ul li a:hover {
+    color: #2c3e50; /* Background color on hover */
+}
+
+/* Styles for the job list */
+.job-list {
+    margin-left: 250px; /* Adjust the margin according to your sidebar width */
+    padding: 20px;
+}
+
+/* Styles for individual job items */
+.job-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.job-item:hover {
+    box-shadow: 0 0 20px #2980b9;
+}
+
+
+/* Styles for job item card body */
+.job-item .card-body {
+    padding: 20px;
+}
+
+/* Styles for job item title */
+.job-item .card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Styles for job item text */
+.job-item .card-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
